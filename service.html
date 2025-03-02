@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Panthar HTML-5 Template</title>
+    <title>Safelite Guard Security Services - Professional Security Solutions</title>
+    <meta name="description" content="Safelite Guard Security Services provides professional security solutions including armed and unarmed security, mobile patrol, event security, and executive protection.">
     <!-- favicon -->
     <link rel="icon" href="assets/img/favicon.png" sizes="20x20" type="image/png" />
     <!-- animate -->
@@ -29,6 +30,407 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Responsive -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+        .navbar-area.nav-fixed {
+            background-color: #0B1B35 !important;
+            padding: 0 !important;
+        }
+        .navbar-area.nav-fixed .logo-wrapper img {
+            max-height: 75px !important;
+            transition: all 0.3s ease;
+            filter: brightness(0) invert(1);
+        }
+        .navbar-area .logo-wrapper img {
+            max-height: 115px;
+            width: auto;
+            margin: 1px 0;
+            transition: all 0.3s ease;
+        }
+        .footer-logo {
+            display: block;
+            margin-bottom: 30px;
+        }
+        .footer-logo img {
+            max-height: 85px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+        .nav-right-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar-area .nav-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (min-width: 992px) {
+            .navbar-area .navbar-collapse {
+                display: flex !important;
+                justify-content: center;
+                flex-grow: 1;
+            }
+            .navbar-nav.nav-inner {
+                margin: 0 !important;
+            }
+            .navbar-area.nav-fixed .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+            }
+            .navbar-area.nav-fixed .navbar-collapse {
+                flex: 1;
+                justify-content: center;
+                margin-right: 200px;
+            }
+            .navbar-area.nav-fixed .nav-right-content {
+                position: absolute;
+                right: 15px;
+                top: 60%;
+                transform: translateY(-40%);
+            }
+            .navbar-area.nav-fixed .logo-wrapper {
+                position: absolute;
+                left: 15px;
+                top: 60%;
+                transform: translateY(-40%);
+            }
+            .navbar-area.nav-fixed .navbar-nav {
+                margin-right: 0;
+                padding-right: 0;
+            }
+            .navbar-area.nav-fixed .nav-right-content .btn-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .service-single-item-list {
+            margin-bottom: 30px;
+        }
+        .service-single-item {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 100%;
+            background: #fff;
+        }
+        .service-single-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .service-single-item .thumb {
+            height: auto;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .service-single-item .thumb i {
+            color: #0B1B35;
+            transition: all 0.3s ease;
+        }
+        .service-single-item:hover .thumb i {
+            transform: scale(1.1);
+            color: #007bff;
+        }
+        .service-single-item .details {
+            padding: 25px;
+        }
+        .service-single-item .details h4 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #0B1B35;
+        }
+        .service-single-item .details p {
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #666;
+        }
+        .service-single-item .read-btn {
+            color: #0B1B35;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .service-single-item .read-btn:hover {
+            color: #007bff;
+        }
+        .footer-area {
+            background: #0B1B35;
+            color: #fff;
+        }
+        .footer-widget .widget-headline {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        .footer-widget ul li {
+            margin-bottom: 12px;
+        }
+        .footer-widget ul li a {
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .footer-widget ul li a:hover {
+            color: #007bff;
+            padding-left: 5px;
+        }
+        .subscribe-box .newsletter-form {
+            display: flex;
+            gap: 15px;
+        }
+        .subscribe-box .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: transparent;
+            color: #fff;
+            padding: 0 20px;
+            width: 100%;
+        }
+        .subscribe-box .form-control::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        .footer-widget .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-widget .contact-info li i {
+            color: #007bff;
+            width: 20px;
+        }
+        .copyright-area {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 20px 0;
+        }
+        .copyright-area-inner {
+            text-align: center;
+        }
+        .copyright-area-inner p {
+            margin: 0;
+            color: rgba(255,255,255,0.7);
+        }
+        .widget-list-items {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .widget-list-items li .icon {
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .widget-list-items li .icon:hover {
+            background: #007bff;
+        }
+        .widget-list-items li .icon a {
+            color: #fff;
+        }
+        .testimonial-area {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        .test-single-items {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin: 15px;
+            transition: all 0.3s ease;
+        }
+        .test-single-items:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .test-header .rating {
+            margin-bottom: 20px;
+        }
+        .test-header .rating i {
+            color: #ffc107;
+            margin-right: 2px;
+        }
+        .test-body p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .test-footer {
+            display: flex;
+            align-items: center;
+        }
+        .test-info {
+            padding-left: 15px;
+        }
+        .test-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #0B1B35;
+        }
+        .test-designation {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+        .theme-heading-title .subtitle {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .theme-heading-title .title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #0B1B35;
+        }
+        .theme-heading-title .test-para {
+            color: #666;
+            line-height: 1.6;
+        }
+        .why-choose-two-area {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .icon-box-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 30px;
+        }
+        .icon-box {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .icon-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .icon-box i {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .icon-box h4 {
+            font-size: 18px;
+            color: #0B1B35;
+            margin: 0;
+        }
+        .list-item-wrap ul li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .style-dot {
+            width: 10px;
+            height: 10px;
+            background: #007bff;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .style-bar {
+            width: 30px;
+            height: 2px;
+            background: #007bff;
+            margin-right: 15px;
+        }
+        .content {
+            font-size: 16px;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .icon-box-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            background: #007bff;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .contact-item i {
+            color: #007bff;
+            width: 20px;
+            text-align: center;
+        }
+        .header-social {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .header-social li {
+            margin-right: 20px;
+        }
+        .header-social li:last-child {
+            margin-right: 0;
+        }
+        .header-social li a {
+            color: #fff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-transform: capitalize;
+        }
+        .header-social li a i {
+            margin-right: 5px;
+            color: #007bff;
+        }
+        .header-social li a:hover {
+            color: #007bff;
+        }
+        .navbar-area .nav-inner li a {
+            transition: color 0.3s ease;
+        }
+        .navbar-area .nav-inner li a:hover {
+            color: #E71F1F !important;
+        }
+        .navbar-area .nav-inner li.current-menu-item a {
+            color: #E71F1F !important;
+        }
+        .navbar-area.nav-fixed .nav-inner li a:hover {
+            color: #E71F1F !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,6 +442,16 @@
                     <div class="form-group mb-0">
                         <input type="text" name="s" class="form-control" placeholder="Search....">
                     </div>
+                            <div class="left-content">
+                                <div class="social-icon">
+                                    <ul>
+                                        <li><img src="./assets/icon/share-svgrepo-com.png" alt=""><a href="#">FACEBOOK</a></li>
+                                        <li><a href="#">TWITTER</a></li>
+                                        <li><a href="#">INSTAGRAM</a></li>
+                                        <li><a href="#">YOUTUBE</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                     <button class="close-btn border-none submit-btn"><i class="fas fa-search"></i></button>
                 </div>
             </div>
@@ -52,24 +464,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="topbar-inner">
-                            <div class="left-content">
-                                <div class="social-icon">
-                                    <ul>
-                                        <li><img src="./assets/icon/share-svgrepo-com.png" alt=""><a
-                                                href="#">FACEBOOK</a></li>
-                                        <li><a href="#">TWITTER</a></li>
-                                        <li><a href="#">INSTAGRAM</a></li>
-                                        <li><a href="#">YOUTUBE</a></li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div class="right-contnet">
                                 <ul class="info-items">
-                                    <li><a href="tel:000111555"><img src="./assets/icon/location.png" alt=""> Dewi Sri
-                                            Street. 2891, Denpasar, Bali</a>
-                                    </li>
-                                    <li><a href="mailto:info@gmail.com"><img src="./assets/icon/mail.png" alt="">
-                                            info@Political.com</a></li>
+                                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</a></li>
+                                    <li><a href="mailto:info@safeliteguardsecurity.com"><i class="fas fa-envelope"></i> info@safeliteguardsecurity.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -84,11 +482,11 @@
             <div class="container custom-container">
                 <div class="responsive-menu">
                     <div class="logo-wrapper">
-                        <a href="index.html" class="logo">
-                            <img src="assets/img/logo/logo.png" alt="" />
+                        <a href="index.html" class="">
+                            <img src="./assets/img/logo/safelitelogo1.png" alt="Safelite Guard Logo" style="max-height: 115px; width: auto; margin: 1px 0;" />
                         </a>
-                        <a href="index.html" class="logo-white-display"> <img src="assets/img/logo/white-logo.png"
-                                alt="footer logo"></a>
+                        <a href="index.html" class="logo-white-display"> <img src=""
+                                alt=""></a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#themebuzs_main_menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,55 +495,18 @@
                 </div>
                 <div class="collapse navbar-collapse" id="themebuzs_main_menu">
                     <ul class="navbar-nav nav-inner">
-                        <li class="menu-item-has-children current-menu-item">
-                            <a href="#">Home</a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html"><span>Home 01</span></a></li>
-                                <li><a href="index-2.html"><span>Home 02</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html"><span>ABOUT US </span> </a></li>
-                        <li class="menu-item-has-children">
-                            <a href="#">PAGES</a>
-                            <ul class="sub-menu">
-                                <li><a href="case-study.html"><span>Case Study</span></a></li>
-                                <li><a href="case-single.html"><span>Case Single</span></a></li>
-                                <li><a href="team.html"><span>Team</span></a></li>
-                                <li><a href="team-details.html"><span>Team Single</span></a></li>
-                                <li><a href="faq.html"><span>FAQ</span></a></li>
-                                <li><a href="gallary.html"><span>Gallery</span></a></li>
-                                <li><a href="get-quote.html"><span>Quation</span></a></li>
-                                <li><a href="contact.html"><span>Contact</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="service.html"> SERVICES</a>
-                            <ul class="sub-menu">
-                                <li><a href="service.html"><span>Service</span></a></li>
-                                <li><a href="service-single.html"><span>Service Single</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="blog.html"> BLOG </a>
-                            <ul class="sub-menu">
-                                <li><a href="blog.html"><span>Blog</span></a></li>
-                                <li><a href="blog-classic.html"><span>Blog Classic</span></a></li>
-                                <li><a href="blog-single.html"><span>Blog Single</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="contact.html"> CONTACT US</a>
-                        </li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="service.html">SERVICES</a></li>
+                        <li><a href="careers.html">CAREERS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="nav-right-content">
-                    <div class="search-btn" id="search-popupp">
-                        <img src="./assets/icon/search.png" class="header-search" id="search" alt="">
-                    </div>
                     <div class="btn-wrapp">
                         <ul>
                             <li>For <span>Emergency!</span></li>
-                            <li>+0 123 456 789</li>
+                            <li>+1 (747) 217-4934</li>
                         </ul>
                     </div>
                 </div>
@@ -169,106 +530,179 @@
     </div>
     <!-- breadcrumb area end -->
 
-    <div class="service-area margin-bottom-90">
+    <div class="service-section padding-top-120 padding-bottom-120">
         <div class="container">
-            <div class="section-wrapper">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="theme-heading-title">
-                            <h2 class="title">Smart Security sERVICE FOR <br>
-                                YOUR LIVE SAFETY</h2>
-                        </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="theme-heading-title text-center margin-bottom-50">
+                        <h4 class="subtitle">Welcome to Safelite Guard Security Service Inc.</h4>
+                        <h2 class="title">"Your Safety, Our Priority. Your Peace of Mind, Our Commitment."</h2>
+                        <p class="service-para">At Safelite Guard Security Service Inc., we don't just provide security—we deliver peace of mind. Our clients trust us because we go beyond just protecting assets; we create a sense of safety and assurance in every environment we serve.</p>
+                        <p class="service-para">With a team of highly trained professionals, cutting-edge technology, and a proactive approach to risk prevention, we ensure that you, your business, and your community remain safe and secure—24/7.</p>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="service-wrapperr">
-                            <p>Panthar has successfully completed 13 years in private security industry. Due to its
-                                professionalism, hard work and high ethical standard, Orion has been able to attain</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="theme-heading-title margin-bottom-50">
+                        <h4 class="subtitle">Our Services</h4>
+                        <h2 class="title">Protection That Brings Peace of Mind</h2>
+                        <p class="service-para">We offer a comprehensive range of security solutions tailored to meet your specific needs:</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-single-item-list">
+                        <div class="service-single-item">
+                            <div class="thumb text-center py-4 bg-light">
+                                <i class="fas fa-shield-alt fa-4x text-primary"></i>
+                            </div>
+                            <div class="details">
+                                <h4 class="title">Armed & Unarmed Security</h4>
+                                <p>Professional security officers providing visible protection for properties and assets.</p>
+                                <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="service-wrapper">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="service-single-item-list">
-                                <div class="service-single-item">
-                                    <div class="thumb">
-                                        <img src="./assets/img/section-img/service/main-service-01.png" alt="">
-                                    </div>
-                                    <div class="details">
-                                        <h4 class="title"><a href="service-single.html">Business Security</a></h4>
-                                        <a class="read-btn" href="service-single.html"><i
-                                                class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-single-item-list">
+                        <div class="service-single-item">
+                            <div class="thumb text-center py-4 bg-light">
+                                <i class="fas fa-car fa-4x text-primary"></i>
+                            </div>
+                            <div class="details">
+                                <h4 class="title">Mobile Patrol Services</h4>
+                                <p>24/7 patrol coverage ensuring rapid response to any security incidents.</p>
+                                <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="service-single-item-list">
-                                <div class="service-single-item">
-                                    <div class="thumb">
-                                        <img src="./assets/img/section-img/service/main/service-02.png" alt="">
-                                    </div>
-                                    <div class="details">
-                                        <h4 class="title"><a href="service-single.html">Bank Security</a></h4>
-                                        <a class="read-btn" href="service-single.html"><i
-                                                class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-single-item-list">
+                        <div class="service-single-item">
+                            <div class="thumb text-center py-4 bg-light">
+                                <i class="fas fa-users fa-4x text-primary"></i>
+                            </div>
+                            <div class="details">
+                                <h4 class="title">Event Security</h4>
+                                <p>Professional crowd management and VIP protection for all types of events.</p>
+                                <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="service-single-item-list">
-                                <div class="service-single-item">
-                                    <div class="thumb">
-                                        <img src="./assets/img/section-img/service/main/service-03.png" alt="">
-                                    </div>
-                                    <div class="details">
-                                        <h4 class="title"><a href="service-single.html">Event Security </a></h4>
-                                        <a class="read-btn" href="service-single.html"><i
-                                                class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-single-item-list">
+                        <div class="service-single-item">
+                            <div class="thumb text-center py-4 bg-light">
+                                <i class="fas fa-building fa-4x text-primary"></i>
+                            </div>
+                            <div class="details">
+                                <h4 class="title">Corporate Security</h4>
+                                <p>Comprehensive workplace security solutions for business environments.</p>
+                                <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="service-single-item-list">
-                                <div class="service-single-item">
-                                    <div class="thumb">
-                                        <img src="./assets/img/section-img/service/main/service-04.png" alt="">
-                                    </div>
-                                    <div class="details">
-                                        <h4 class="title"><a href="service-single.html">Bodyguard Security </a></h4>
-                                        <a class="read-btn" href="service-single.html"><i class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-single-item-list">
+                        <div class="service-single-item">
+                            <div class="thumb text-center py-4 bg-light">
+                                <i class="fas fa-video fa-4x text-primary"></i>
+                            </div>
+                            <div class="details">
+                                <h4 class="title">CCTV & Surveillance</h4>
+                                <p>Advanced monitoring systems for proactive threat prevention.</p>
+                                <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="service-single-item-list">
-                                <div class="service-single-item">
-                                    <div class="thumb">
-                                        <img src="./assets/img/section-img/service/main/service-05.png" alt="">
-                                    </div>
-                                    <div class="details">
-                                        <h4 class="title"><a href="service-single.html">Office Security  </a></h4>
-                                        <a class="read-btn" href="service-single.html"><i class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-single-item-list">
+                        <div class="service-single-item">
+                            <div class="thumb text-center py-4 bg-light">
+                                <i class="fas fa-user-shield fa-4x text-primary"></i>
+                            </div>
+                            <div class="details">
+                                <h4 class="title">Executive Protection</h4>
+                                <p>Specialized security services for high-profile individuals and executives.</p>
+                                <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="service-single-item-list">
-                                <div class="service-single-item">
-                                    <div class="thumb">
-                                        <img src="./assets/img/section-img/service/main/service-06.png" alt="">
-                                    </div>
-                                    <div class="details">
-                                        <h4 class="title"><a href="#">Vehicle
-                                                Escort </a></h4>
-                                        <a class="read-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="why-choose-two-area">
+                        <div class="theme-heading-title">
+                            <h4 class="subtitle">Why Choose Us</h4>
+                            <h2 class="title">Why Choose Safelite Guard?</h2>
+                            <div class="list-item-wrap">
+                                <ul>
+                                    <li>
+                                        <span class="style-dot"></span>
+                                        <span class="style-bar"></span>
+                                        <div class="content">
+                                            <strong>"You're Safe With Us"</strong> – Our promise is not just security but peace of mind for you, your business, and your loved ones.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="style-dot"></span>
+                                        <span class="style-bar"></span>
+                                        <div class="content">
+                                            <strong>Licensed, Insured & Highly Trained Security Officers</strong> – Providing expertise in safety, crisis response, and risk management.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="style-dot"></span>
+                                        <span class="style-bar"></span>
+                                        <div class="content">
+                                            <strong>24/7 Protection & Rapid Response</strong> – Security doesn't sleep, and neither do we.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="style-dot"></span>
+                                        <span class="style-bar"></span>
+                                        <div class="content">
+                                            <strong>Tailored Security Plans</strong> – Every client's needs are different; we craft security strategies that fit you perfectly.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="style-dot"></span>
+                                        <span class="style-bar"></span>
+                                        <div class="content">
+                                            <strong>State-of-the-Art Security Technology</strong> – We use advanced surveillance, real-time reporting, and analytics to keep you safe.
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-12 text-center">
+                    <div class="theme-heading-title">
+                        <h4 class="subtitle">Contact Us</h4>
+                        <h2 class="title">Take the Next Step in Securing Your Peace of Mind</h2>
+                        <p class="service-para">Your safety should never be a concern—that's why we handle it for you. Whether you need protection for your business, property, event, or personal safety, we're here to provide the security and reassurance you deserve.</p>
+                        <div class="contact-info mt-4">
+                            <h3>Contact Us Today for a Free Security Assessment</h3>
+                            <ul class="contact-list">
+                                <li><i class="fas fa-phone"></i> Call Us: <a href="tel:+17472174934">+1 (747) 217-4934</a></li>
+                                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:safeliteguard@gmail.com">safeliteguard@gmail.com</a></li>
+                                <li><i class="fas fa-globe"></i> Visit: <a href="http://www.SafeliteGuardSecurity.com">www.SafeliteGuardSecurity.com</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -338,102 +772,66 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="animate-image-inner">
-                        <div class="thumb">
-                            <img src="./assets/img/section-img/service/service-vl-image.png" alt="thumb">
-                            <img src="./assets/img/section-img/about/about-03.png" class="before-text-03" alt="">
+                    <div class="theme-heading-title">
+                        <div class="subtitle shape">WHY CHOOSE US</div>
+                        <h3 class="title title-2">Professional Security Excellence</h3>
+                        <p class="why-choose-two">At Safelite Guard, we combine expertise, technology, and dedication to deliver superior security services. Our commitment to excellence and client satisfaction sets us apart in the industry.</p>
+                        <div class="list-item-wrap">
+                            <ul>
+                                <li>
+                                    <span class="style-dot"></span>
+                                    <span class="style-bar"></span>
+                                    <div class="content">Licensed & Certified Security Personnel</div>
+                                </li>
+                                <li>
+                                    <span class="style-dot"></span>
+                                    <span class="style-bar"></span>
+                                    <div class="content">24/7 Emergency Response</div>
+                                </li>
+                                <li>
+                                    <span class="style-dot"></span>
+                                    <span class="style-bar"></span>
+                                    <div class="content">Advanced Security Technology</div>
+                                </li>
+                                <li>
+                                    <span class="style-dot"></span>
+                                    <span class="style-bar"></span>
+                                    <div class="content">Customized Security Solutions</div>
+                                </li>
+                                <li>
+                                    <span class="style-dot"></span>
+                                    <span class="style-bar"></span>
+                                    <div class="content">Comprehensive Training Programs</div>
+                                </li>
+                                <li>
+                                    <span class="style-dot"></span>
+                                    <span class="style-bar"></span>
+                                    <div class="content">Client-Focused Approach</div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="theme-heading-title">
-                        <div class="subtitle shape">
-                            WHY CHOOSE US <div class="icon-right animated">
-                                <i aria-hidden="true" class="icomoon icomoon-bullet"></i> </div>
-                        </div>
-                        <h3 class="title title-2">
-                            WE'RE QUALIFIED &amp; PROFESSIONAL </h3>
-                        <h6 class="smalltitle pb-2">
-                            We believe in the following core values </h6>
-                        <p class="why-choose-two">We're Qualified dolor sit amet, consectetur adipiscing elit, sed do
-                            eius tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim adiqua minim veniam quis nostrud exercitation ullamco
-                            laboris sed</p>
-                    </div>
-                    <div class="service-inner-wrapper-01">
-                        <div class="service-left-01">
-                            <img src="./assets/img/section-img/service/service-left-01.png" alt="">
-                        </div>
-                        <div class="service-right-01">
-                            <div class="list-item-wrap">
-                                <ul>
-
-                                    <!-- list left icon style -->
-
-                                    <li>
-                                        <span class="style-dot "></span> <span class="style-bar "></span>
-                                        <div class="content d-inline-block">Security Consulting </div>
-                                        <span class="detail-content"> </span>
-                                    </li>
-
-
-                                    <!-- list left icon style -->
-
-                                    <li>
-                                        <span class="style-dot "></span> <span class="style-bar "></span>
-                                        <div class="content d-inline-block">Private Security </div>
-                                        <span class="detail-content"> </span>
-                                    </li>
-
-
-                                    <!-- list left icon style -->
-
-                                    <li>
-                                        <span class="style-dot "></span> <span class="style-bar "></span>
-                                        <div class="content d-inline-block">Close Protections </div>
-                                        <span class="detail-content"> </span>
-                                    </li>
-
-
-                                    <!-- list left icon style -->
-
-                                    <li>
-                                        <span class="style-dot "></span> <span class="style-bar "></span>
-                                        <div class="content d-inline-block">Guard House </div>
-                                        <span class="detail-content"> </span>
-                                    </li>
-
-
-                                    <!-- list left icon style -->
-
-                                    <li>
-                                        <span class="style-dot "></span> <span class="style-bar "></span>
-                                        <div class="content d-inline-block">Always Honest </div>
-                                        <span class="detail-content"> </span>
-                                    </li>
-
-
-                                    <!-- list left icon style -->
-
-                                    <li>
-                                        <span class="style-dot "></span> <span class="style-bar "></span>
-                                        <div class="content d-inline-block">24/7 Constant Support </div>
-                                        <span class="detail-content"> </span>
-                                    </li>
-
-                                </ul>
+                    <div class="why-choose-image">
+                        <div class="icon-box-wrapper">
+                            <div class="icon-box">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Trusted Protection</h4>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-clock"></i>
+                                <h4>24/7 Service</h4>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-user-shield"></i>
+                                <h4>Expert Team</h4>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Proven Results</h4>
                             </div>
                         </div>
-                    </div>
-                    <div class="btn-wrap mt-2 pt-1 service-btn-0">
-                        <a href="#" class="btn-panthar btn-border-base ">
-                            <span class="top_left"></span>
-                            <span class="top_right"></span>
-                            <span>
-                                CHECK ALL SERVICES </span>
-                            <span class="bottom_left"></span>
-                            <span class="bottom_right"></span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -447,13 +845,9 @@
                 <div class="col-lg-4">
                     <div class="testimonial-left-side">
                         <div class="theme-heading-title">
-                            <h4 class="subtitle">
-                                Testimonial
-                                <img class="bullet" src="./assets/img/shapes/bullet.png" alt="">
-                            </h4>
-                            <h2 class="title">loves from special client's</h2>
-                            <p class="test-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
-                                tempor incididunt ut labore et dolore</p>
+                            <h4 class="subtitle">Client Testimonials</h4>
+                            <h2 class="title">What Our Clients Say</h2>
+                            <p class="test-para">Hear from businesses and individuals who trust Safelite Guard with their security needs.</p>
                         </div>
                     </div>
                 </div>
@@ -470,24 +864,14 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                        <div class="message-icon">
-                                            <img src="./assets/img/section-img/testimonial/message.png" alt="">
-                                        </div>
                                     </div>
                                     <div class="test-body">
-                                        <p>A testimonial is effectively a
-                                            review or recommendation from
-                                            a client, letting other people
-                                            know how your products or
-                                            services benefitted them.
-                                            Customer testimonials can take.</p>
+                                        <p>"Safelite Guard has provided exceptional security services for our corporate events. Their professional team ensures everything runs smoothly and safely."</p>
                                     </div>
                                     <div class="test-footer">
-                                        <div class="test-author">
-                                            <img src="./assets/img/section-img/testimonial/author-01.png" alt="">
-                                        </div>
-                                        <div class="test-name before-remove">
-                                            <h4 class="test-name">Morgaan Smith</h4>
+                                        <div class="test-info">
+                                            <h4 class="test-name">John Anderson</h4>
+                                            <p class="test-designation">Corporate Event Manager</p>
                                         </div>
                                     </div>
                                 </div>
@@ -502,24 +886,14 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                        <div class="message-icon">
-                                            <img src="./assets/img/section-img/testimonial/message.png" alt="">
-                                        </div>
                                     </div>
                                     <div class="test-body">
-                                        <p>A testimonial is effectively a
-                                            review or recommendation from
-                                            a client, letting other people
-                                            know how your products or
-                                            services benefitted them.
-                                            Customer testimonials can take.</p>
+                                        <p>"The mobile patrol service from Safelite Guard gives us peace of mind knowing our property is monitored 24/7. Their response time is impressive."</p>
                                     </div>
                                     <div class="test-footer">
-                                        <div class="test-author">
-                                            <img src="./assets/img/section-img/testimonial/author-02.png" alt="">
-                                        </div>
-                                        <div class="test-name before-remove">
-                                            <h4 class="test-name">DINMITRO PANTU</h4>
+                                        <div class="test-info">
+                                            <h4 class="test-name">Sarah Martinez</h4>
+                                            <p class="test-designation">Property Manager</p>
                                         </div>
                                     </div>
                                 </div>
@@ -534,66 +908,17 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                        <div class="message-icon">
-                                            <img src="./assets/img/section-img/testimonial/message.png" alt="">
-                                        </div>
                                     </div>
                                     <div class="test-body">
-                                        <p>A testimonial is effectively a
-                                            review or recommendation from
-                                            a client, letting other people
-                                            know how your products or
-                                            services benefitted them.
-                                            Customer testimonials can take.</p>
+                                        <p>"The executive protection team at Safelite Guard is highly trained and professional. They provide discreet yet effective security services."</p>
                                     </div>
                                     <div class="test-footer">
-                                        <div class="test-author">
-                                            <img src="./assets/img/section-img/testimonial/author-01.png" alt="">
-                                        </div>
-                                        <div class="test-name before-remove">
-                                            <h4 class="test-name">Morgaan Smith</h4>
+                                        <div class="test-info">
+                                            <h4 class="test-name">Michael Chen</h4>
+                                            <p class="test-designation">Business Executive</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-single">
-                                <div class="test-single-items test-items-home-one">
-                                    <div class="test-header">
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="message-icon">
-                                            <img src="./assets/img/section-img/testimonial/message.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="test-body">
-                                        <p>A testimonial is effectively a
-                                            review or recommendation from
-                                            a client, letting other people
-                                            know how your products or
-                                            services benefitted them.
-                                            Customer testimonials can take.</p>
-                                    </div>
-                                    <div class="test-footer">
-                                        <div class="test-author">
-                                            <img src="./assets/img/section-img/testimonial/author-01.png" alt="">
-                                        </div>
-                                        <div class="test-name before-remove">
-                                            <h4 class="test-name">DIRASON JUKKI</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wrapper-progreess-one">
-                        <div class="slick-carousel-controls">
-                            <div class="slider-controlprogress slider-testimonial-one-progress">
-                                <span class="slider__label sr-only"></span>
                             </div>
                         </div>
                     </div>
@@ -610,14 +935,15 @@
                 <div class="subscribe-wrapper">
                     <div class="row align-items-center">
                         <div class="col-lg-4">
-                            <a href="index.html" class="footer-logo"> <img src="assets/img/logo/white-logo.png"
-                                    alt="footer logo"></a>
+                            <a href="index.html" class="footer-logo"> 
+                                <img src="./assets/img/logo/safelitelogo1.png" alt="Safelite Guard Logo" style="max-height: 85px; width: auto; filter: brightness(0) invert(1);">
+                            </a>
                         </div>
                         <div class="col-lg-8">
                             <div class="subscribe-box">
-                                <form action="#">
-                                    <input type="text" placeholder="enter your email address">
-                                    <button class="btn-panthar btn-border-base footer-subscribe-btn">
+                                <form action="#" class="newsletter-form">
+                                    <input type="email" placeholder="Enter your email address" class="form-control">
+                                    <button type="submit" class="btn-panthar btn-border-base footer-subscribe-btn">
                                         <span class="top_left"></span>
                                         <span class="top_right"></span>
                                         GET ALERT <i class="far fa-paper-plane"></i>
@@ -631,82 +957,53 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div id="panthar_about_me_widget-2" class="widget footer-widget panthar-widget-about-me">
-                            <div class="footer-widget widget">
-                                <div class="about_me_widget style-01">
-                                    <h4 class="widget-headline">about us</h4>
-                                    <p> Our team includes doormen, bodyguards, and parking lot patrol officers more
-                                        than
-                                        15 years of combined our experience.</p>
-                                    <ul class="widget-list-items">
-                                        <li>
-                                            <div class="icon">
-                                                <a href="#">
-                                                    <i class="fab fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <a href="#">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <a href="#">
-                                                    <i class="fab fa-pinterest-p"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <a href="#">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
+                        <div class="footer-widget widget">
+                            <div class="about_me_widget style-01">
+                                <h4 class="widget-headline">ABOUT US</h4>
+                                <p>Safelite Guard Security - Your Trusted Security Partner</p>
+                                <div class="social-icons">
+                                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline">OUR COMPANY</h4>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="service.html">Service</a></li>
-                                <li><a href="about.html">Our Campaign</a></li>
-                                <li><a href="team.html">Our Volunteer</a></li>
+                            <h4 class="widget-headline" style="color: #fff;">QUICK LINKS</h4>
+                            <ul style="margin: 0; padding: 0; list-style: none;">
+                                <li><a href="index.html" style="color: #fff; transition: all 0.3s ease;">Home</a></li>
+                                <li><a href="about.html" style="color: #fff; transition: all 0.3s ease;">About Us</a></li>
+                                <li><a href="service.html" style="color: #fff; transition: all 0.3s ease;">Services</a></li>
+                                <li><a href="careers.html" style="color: #fff; transition: all 0.3s ease;">Careers</a></li>
+                                <li><a href="contact.html" style="color: #fff; transition: all 0.3s ease;">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline">HELP</h4>
-                            <ul>
-                                <li><a href="service.html">Event Security</a></li>
-                                <li><a href="service.html">Bank Security</a></li>
-                                <li><a href="service.html">Office Security</a></li>
-                                <li><a href="service.html">Office Security</a></li>
-                                <li><a href="service.html">Vehicle Escort</a></li>
+                            <h4 class="widget-headline" style="color: #fff;">OUR SERVICES</h4>
+                            <ul style="margin: 0; padding: 0; list-style: none;">
+                                <li><a href="service.html#armed-security" style="color: #fff; transition: all 0.3s ease;">Armed Security</a></li>
+                                <li><a href="service.html#unarmed-security" style="color: #fff; transition: all 0.3s ease;">Unarmed Security</a></li>
+                                <li><a href="service.html#event-security" style="color: #fff; transition: all 0.3s ease;">Event Security</a></li>
+                                <li><a href="service.html#mobile-patrol" style="color: #fff; transition: all 0.3s ease;">Mobile Patrol</a></li>
+                                <li><a href="service.html#executive-protection" style="color: #fff; transition: all 0.3s ease;">Executive Protection</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline">SERVICES</h4>
-                            <ul>
-                                <li><a href="service.html">Knowledge base</a></li>
-                                <li><a href="service.html">Security resources</a></li>
-                                <li><a href="faq.html">Terms & Conditions</a></li>
-                                <li><a href="gallary.html">Gallery</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
+                            <h4 class="widget-headline">CONTACT INFO</h4>
+                            <div class="contact-info">
+                                <div class="contact-item"><i class="fas fa-phone"></i> +1 (747)-217-4934</div>
+                                <div class="contact-item"><i class="fas fa-envelope"></i> info@safeliteguardsecurity.com</div>
+                                <div class="contact-item"><i class="fas fa-globe"></i> www.safeliteguardsecurity.com</div>
+                                <div class="contact-item"><i class="fas fa-clock"></i> Available 24/7</div>
+                                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -717,7 +1014,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright-area-inner">
-                            <p>Copyright 2021 Panthar. Designed By <span>themebuzs</span> </p>
+                            <p>Copyright © 2025 Safelite Security Guard, Inc. All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
