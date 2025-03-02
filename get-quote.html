@@ -29,6 +29,95 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Responsive -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+        .navbar-area.nav-fixed {
+            background-color: #0B1B35 !important;
+            padding: 0 !important;
+        }
+        .navbar-area.nav-fixed .logo-wrapper img {
+            max-height: 75px !important;
+            transition: all 0.3s ease;
+            filter: brightness(0) invert(1);
+        }
+        .footer-logo {
+            display: block;
+            margin-bottom: 30px;
+        }
+        .footer-logo img {
+            max-height: 85px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+        .nav-right-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar-area .nav-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-area.nav-fixed .logo-wrapper {
+            position: relative;
+            display: block;
+            padding: 10px 0;
+        }
+        .navbar-area.nav-fixed .logo-wrapper img {
+            max-height: 75px !important;
+            transition: all 0.3s ease;
+            filter: brightness(0) invert(1);
+        }
+        .navbar-area .logo-wrapper img {
+            max-height: 115px;
+            width: auto;
+            margin: 1px 0;
+            transition: all 0.3s ease;
+        }
+        @media (min-width: 992px) {
+            .navbar-area .navbar-collapse {
+                display: flex !important;
+                justify-content: center;
+                flex-grow: 1;
+            }
+            .navbar-nav.nav-inner {
+                margin: 0 !important;
+            }
+            .navbar-area.nav-fixed .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+            }
+            .navbar-area.nav-fixed .navbar-collapse {
+                flex: 1;
+                justify-content: center;
+                margin-right: 200px;
+            }
+            .navbar-area.nav-fixed .nav-right-content {
+                position: absolute;
+                right: 15px;
+                top: 60%;
+                transform: translateY(-40%);
+            }
+            .navbar-area.nav-fixed .logo-wrapper {
+                position: absolute;
+                left: 15px;
+                top: 60%;
+                transform: translateY(-40%);
+            }
+            .navbar-area.nav-fixed .navbar-nav {
+                margin-right: 0;
+                padding-right: 0;
+            }
+            .navbar-area.nav-fixed .nav-right-content .btn-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -85,7 +174,7 @@
                 <div class="responsive-menu">
                     <div class="logo-wrapper">
                         <a href="index.html" class="">
-                            <img src="" alt="" />
+                            <img src="./assets/img/logo/safelitelogo1.png" alt="Safelite Guard Logo" style="max-height: 115px; width: auto; margin: 1px 0;" />
                         </a>
                         <a href="index.html" class="logo-white-display"> <img src=""
                                 alt=""></a>
@@ -97,18 +186,14 @@
                 </div>
                 <div class="collapse navbar-collapse" id="themebuzs_main_menu">
                     <ul class="navbar-nav nav-inner">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">CONTACT</a>
-                        </li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="service.html">SERVICES</a></li>
+                        <li><a href="careers.html">CAREERS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="nav-right-content">
-                    <div class="search-btn" id="search-popupp">
-                        <img src="./assets/icon/search.png" class="header-search" id="search" alt="">
-                    </div>
                     <div class="btn-wrapp">
                         <ul>
                             <li>For <span>Emergency!</span></li>
@@ -254,6 +339,15 @@
     <footer class="footer-area">
         <div class="container">
             <div class="footer-top padding-top-85 padding-bottom-50">
+                <div class="subscribe-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <a href="index.html" class="footer-logo"> 
+                                <img src="./assets/img/logo/safelitelogo1.png" alt="Safelite Guard Logo" style="max-height: 85px; width: auto; filter: brightness(0) invert(1);">
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="footer-widget widget">
