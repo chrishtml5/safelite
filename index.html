@@ -114,6 +114,27 @@
         .navbar-area.nav-fixed .nav-inner li a:hover {
             color: #E71F1F !important;
         }
+        @media (max-width: 768px) {
+            .footer-area {
+                padding: 20px 0;
+            }
+            .footer-widget {
+                margin-bottom: 20px;
+            }
+            .footer-widget h4 {
+                font-size: 18px;
+            }
+            .contact-item {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align items to the start */
+            }
+            .contact-item i {
+                margin-bottom: 5px; /* Space between icon and text */
+            }
+            .social-icons {
+                flex-wrap: wrap; /* Allow social icons to wrap */
+            }
+        }
     </style>
 </head>
 
@@ -1127,94 +1148,73 @@
     <footer class="footer-area" style="background: #0B1B35; padding: 40px 0;">
         <div class="container">
             <div class="footer-top">
-                <div class="subscribe-wrapper">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 text-center">
+                <div class="row text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer-widget widget">
                             <a href="index.html" class="footer-logo"> 
                                 <img src="./assets/img/logo/safelitelogo1.png" alt="Safelite Guard Logo" style="max-height: 70px; width: auto; filter: brightness(0) invert(1);">
                             </a>
+                            <h4 class="widget-headline" style="color: #fff; margin: 10px 0;">ABOUT US</h4>
+                            <p style="color: #fff; margin-bottom: 5px;">Safelite Guard Security - Your Trusted Security Partner</p>
+                            <p style="color: #E71F1F; font-weight: bold; margin-bottom: 15px; font-size: 16px;">PPO License #122394</p>
+                            <div class="social-icons" style="display: flex; justify-content: center; gap: 10px;">
+                                <a href="https://facebook.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-twitter"></i></a>
+                                <a href="https://linkedin.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://instagram.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-instagram"></i></a>
                         </div>
-                        <div class="col-lg-8 text-center">
-                            <div class="subscribe-box">
-                                <form action="#" class="newsletter-form">
-                                    <input type="email" placeholder="Enter your email address" class="form-control" style="background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 80%; margin: 0 auto;">
-                                    <button type="submit" class="btn-panthar btn-border-base footer-subscribe-btn" style="margin-top: 10px;">
-                                        <span class="top_left"></span>
-                                        <span class="top_right"></span>
-                                        GET ALERT <i class="far fa-paper-plane"></i>
-                                        <span class="bottom_left"></span>
-                                        <span class="bottom_right"></span>
-                                    </button>
-                                </form>
                             </div>
                         </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-headline" style="color: #fff; margin-bottom: 10px;">QUICK LINKS</h4>
+                            <div style="margin: 0; padding: 0; list-style: none;">
+                                <a href="index.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Home</a>
+                                <a href="about.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">About Us</a>
+                                <a href="service.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Services</a>
+                                <a href="careers.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Careers</a>
+                                <a href="contact.html" style="color: #fff; display: block; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Contact Us</a>
                     </div>
                 </div>
-                <div class="row text-center">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-widget widget">
-                            <div class="about_me_widget style-01">
-                                <h4 class="widget-headline" style="color: #fff;">ABOUT US</h4>
-                                <p style="color: #fff;">Safelite Guard Security - Your Trusted Security Partner</p>
-                                <div class="social-icons" style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
-                                    <a href="https://facebook.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://twitter.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://linkedin.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://instagram.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-instagram"></i></a>
-                                </div>
+                                        </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-headline" style="color: #fff; margin-bottom: 10px;">OUR SERVICES</h4>
+                            <div style="margin: 0; padding: 0; list-style: none;">
+                                <a href="service.html#armed-security" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Armed Security</a>
+                                <a href="service.html#unarmed-security" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Unarmed Security</a>
+                                <a href="service.html#event-security" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Event Security</a>
+                                <a href="service.html#mobile-patrol" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Mobile Patrol</a>
+                                <a href="service.html#executive-protection" style="color: #fff; display: block; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Executive Protection</a>
+                                        </div>
+                                        </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-2 col-md-6 col-sm-12">
                         <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline" style="color: #fff;">QUICK LINKS</h4>
-                            <ul style="margin: 0; padding: 0; list-style: none;">
-                                <li><a href="index.html" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Home</a></li>
-                                <li><a href="about.html" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">About Us</a></li>
-                                <li><a href="service.html" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Services</a></li>
-                                <li><a href="careers.html" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Careers</a></li>
-                                <li><a href="contact.html" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline" style="color: #fff;">OUR SERVICES</h4>
-                            <ul style="margin: 0; padding: 0; list-style: none;">
-                                <li><a href="service.html#armed-security" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Armed Security</a></li>
-                                <li><a href="service.html#unarmed-security" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Unarmed Security</a></li>
-                                <li><a href="service.html#event-security" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Event Security</a></li>
-                                <li><a href="service.html#mobile-patrol" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Mobile Patrol</a></li>
-                                <li><a href="service.html#executive-protection" style="color: #fff; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Executive Protection</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline" style="color: #fff; text-align: center;">CONTACT INFO</h4>
-                            <div class="contact-info" style="margin-top: 20px;">
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                            <h4 class="widget-headline" style="color: #fff; text-align: center; margin-bottom: 10px;">CONTACT INFO</h4>
+                            <div class="contact-info" style="margin-top: 20px; text-align: left;">
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
                                     <i class="fas fa-phone" style="color: #E71F1F;"></i>
                                     <a href="tel:+17472174934" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">+1 (747)-217-4934</a>
-                                </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                        </div>
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
                                     <i class="fas fa-envelope" style="color: #E71F1F;"></i>
                                     <a href="mailto:info@safeliteguardsecurity.com" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">info@safeliteguardsecurity.com</a>
-                                </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    </div>
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
                                     <i class="fas fa-globe" style="color: #E71F1F;"></i>
                                     <a href="https://safeliteguardsecurity.com" target="_blank" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">www.safeliteguardsecurity.com</a>
-                                </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                        </div>
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
                                     <i class="fas fa-clock" style="color: #E71F1F;"></i>
                                     <span>Available 24/7</span>
-                                </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    </div>
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
                                     <i class="fas fa-map-marker-alt" style="color: #E71F1F;"></i>
                                     <a href="https://maps.google.com/?q=Los+Angeles,+CA" target="_blank" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Los Angeles, CA</a>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+        </div>
                     </div>
                 </div>
             </div>
@@ -1224,7 +1224,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright-area-inner" style="text-align: center;">
-                            <p style="color: rgba(255,255,255,0.7); margin: 0;">Copyright © 2025 Safelite Security Guard, Inc. All Rights Reserved</p>
+                            <p style="color: rgba(255,255,255,0.7); margin: 0;">Copyright © 2025 Safelite Guard Services, Inc. All Rights Reserved</p>
+                            <p style="color: #E71F1F; font-weight: bold; margin-top: 5px; font-size: 16px;">PPO License #122394</p>
                         </div>
                     </div>
                 </div>
