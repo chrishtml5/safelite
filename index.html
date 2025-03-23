@@ -292,6 +292,78 @@
                 bottom: 20px;
             }
         }
+
+        .address-infoo {
+            list-style: none;
+            padding: 0;
+        }
+
+        .address-infoo li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .address-infoo li i {
+            margin-right: 10px;
+            min-width: 16px;
+            color: #E71F1F;
+            font-size: 16px;
+        }
+
+        .address-infoo li a,
+        .address-infoo li span {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+            width: auto;
+        }
+
+        .address-infoo li a:hover {
+            color: #E71F1F;
+        }
+
+        @media (max-width: 768px) {
+            .address-infoo li {
+                font-size: 13px;
+            }
+            
+            .address-infoo li i {
+                font-size: 14px;
+            }
+        }
+
+        .company-description {
+            margin: 25px 0 15px;
+        }
+
+        .company-description .title {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .company-description .tagline {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .company-tagline {
+            color: #fff;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 20px 0;
+            max-width: 400px;
+        }
+
+        .company-tagline strong {
+            color: #fff;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -1302,87 +1374,103 @@
     END TESTIMONIALS SECTION -->
 
     <!-- footer area start -->
-    <footer class="footer-area" style="background: #0B1B35; padding: 40px 0;">
+    <footer class="footer-area footer-area-two">
         <div class="container">
-            <div class="footer-top">
-                <div class="row text-center">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="footer-top padding-top-85 padding-bottom-50">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6"> <!-- Increased column width to lg-4 -->
                         <div class="footer-widget widget">
-                            <a href="index.html" class="footer-logo"> 
-                                <img src="./assets/img/logo/safelitelogo1.png" alt="Safelite Guard Logo" style="max-height: 70px; width: auto; filter: brightness(0) invert(1);">
-                            </a>
-                            <h4 class="widget-headline" style="color: #fff; margin: 10px 0;">ABOUT US</h4>
-                            <p style="color: #fff; margin-bottom: 5px;">Safelite Guard Security - Your Trusted Security Partner</p>
-                            <p style="color: #E71F1F; font-weight: bold; margin-bottom: 15px; font-size: 16px;">PPO License #122394</p>
-                            <div class="social-icons" style="display: flex; justify-content: center; gap: 10px;">
-                                <a href="https://facebook.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://twitter.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-twitter"></i></a>
-                                <a href="https://linkedin.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://instagram.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-instagram"></i></a>
-                        </div>
+                            <div class="about_me_widget style-01">
+                                <a href="index.html" class="footer-logo-two"> 
+                                    <img src="./assets/img/logo/safelitelogo1.png" alt="Safelite Guard Logo" style="height: 75px; width: auto;">
+                                </a>
+                                <p class="company-tagline">
+                                    <strong>Safelite Guard Security</strong> - Your Trusted Security Partner.<br>
+                                    We provide professional security solutions with a commitment to excellence.
+                                </p>
+                                <ul class="address-infoo mb-3">
+                                    <li>
+                                        <i class="icomoon-phone"></i>
+                                        <a href="tel:+17472174934">+1 (747)-217-4934</a>
+                                    </li>
+                                    <li>
+                                        <i class="icomoon-map-marker"></i>
+                                        <span>Los Angeles, CA</span>
+                                    </li>
+                                    <li>
+                                        <i class="icomoon-mail"></i>
+                                        <a href="mailto:info@safeliteguardsecurity.com">info@safeliteguardsecurity.com</a>
+                                    </li>
+                                </ul>
+                                <ul class="widget-list-items">
+                                    <li><div class="icon"><a href="#"><i class="fab fa-instagram"></i></a></div></li>
+                                    <li><div class="icon"><a href="#"><i class="fab fa-twitter"></i></a></div></li>
+                                    <li><div class="icon"><a href="#"><i class="fab fa-facebook-f"></i></a></div></li>
+                                    <li><div class="icon"><a href="#"><i class="fab fa-linkedin-in"></i></a></div></li>
+                                </ul>
                             </div>
                         </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline" style="color: #fff; margin-bottom: 10px;">QUICK LINKS</h4>
-                            <div style="margin: 0; padding: 0; list-style: none;">
-                                <a href="index.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Home</a>
-                                <a href="about.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">About Us</a>
-                                <a href="service.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Services</a>
-                                <a href="careers.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Careers</a>
-                                <a href="contact.html" style="color: #fff; display: block; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Contact Us</a>
                     </div>
-                </div>
-                                        </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline" style="color: #fff; margin-bottom: 10px;">OUR SERVICES</h4>
-                            <div style="margin: 0; padding: 0; list-style: none;">
-                                <a href="service.html#armed-security" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Armed Security</a>
-                                <a href="service.html#unarmed-security" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Unarmed Security</a>
-                                <a href="service.html#event-security" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Event Security</a>
-                                <a href="service.html#mobile-patrol" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Mobile Patrol</a>
-                                <a href="service.html#executive-protection" style="color: #fff; display: block; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Executive Protection</a>
-                                        </div>
-                                        </div>
+                            <h4 class="widget-headline">QUICK LINKS</h4>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-headline">OUR SERVICES</h4>
+                            <ul>
+                                <li><a href="service.html#armed-security">Armed Security</a></li>
+                                <li><a href="service.html#unarmed-security">Unarmed Security</a></li>
+                                <li><a href="service.html#event-security">Event Security</a></li>
+                                <li><a href="service.html#mobile-patrol">Mobile Patrol</a></li>
+                                <li><a href="service.html#executive-protection">Executive Protection</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6"> <!-- Adjusted width to lg-3 -->
+                        <div class="widget footer-widget bg-panthar-widget">
+                            <div class="request-form-widget">
+                                <h4 class="widget-headline">Stay Connected</h4>
+                                <div class="request-form">
+                                    <div role="form">
+                                        <form action="#" method="post">
+                                            <div class="widget-footer-subscribe pt-1 pb-1">
+                                                <div class="single-input-inner mb-3">
+                                                    <input class="text-center" type="text" placeholder="Email">
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <button class="btn-panthar btn-border-base btn-style-white text-white w-100">
+                                                        <span class="top_left"></span>
+                                                        <span class="top_right"></span>
+                                                        <i class="fas fa-paper-plane"></i> SUBSCRIBE NOW
+                                                        <span class="bottom_left"></span>
+                                                        <span class="bottom_right"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline" style="color: #fff; text-align: center; margin-bottom: 10px;">CONTACT INFO</h4>
-                            <div class="contact-info" style="margin-top: 20px; text-align: left;">
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-phone" style="color: #E71F1F;"></i>
-                                    <a href="tel:+17472174934" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">+1 (747)-217-4934</a>
                         </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-envelope" style="color: #E71F1F;"></i>
-                                    <a href="mailto:info@safeliteguardsecurity.com" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">info@safeliteguardsecurity.com</a>
                     </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-globe" style="color: #E71F1F;"></i>
-                                    <a href="https://safeliteguardsecurity.com" target="_blank" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">www.safeliteguardsecurity.com</a>
-                        </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-clock" style="color: #E71F1F;"></i>
-                                    <span>Available 24/7</span>
-                    </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-map-marker-alt" style="color: #E71F1F;"></i>
-                                    <a href="https://maps.google.com/?q=Los+Angeles,+CA" target="_blank" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Los Angeles, CA</a>
                 </div>
             </div>
         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-area" style="border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0;">
+        <div class="copyright-area">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="copyright-area-inner" style="text-align: center;">
-                            <p style="color: rgba(255,255,255,0.7); margin: 0;">Copyright © 2025 Safelite Guard Services, Inc. All Rights Reserved</p>
-                            <p style="color: #E71F1F; font-weight: bold; margin-top: 5px; font-size: 16px;">PPO License #122394</p>
+                        <div class="copyright-area-inner copyright-border-two">
+                            <p>Copyright © 2025 Safelite Guard Security Service, Inc. All Rights Reserved | PPO #122394</p>
                         </div>
                     </div>
                 </div>
