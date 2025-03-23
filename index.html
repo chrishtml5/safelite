@@ -135,6 +135,235 @@
                 flex-wrap: wrap; /* Allow social icons to wrap */
             }
         }
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: none;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            width: 320px; /* Slightly smaller width */
+            max-height: 450px; /* Adjusted height */
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            border: 2px solid #0B1B35; /* More visible border */
+        }
+
+        .chat-header {
+            background: #0B1B35;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            border-bottom: 3px solid #E71F1F;
+        }
+
+        .chat-body {
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+            background: #f5f5f5; /* Lighter background */
+        }
+
+        .chat-input {
+            padding: 12px;
+            background: white;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 8px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .chat-input input:focus {
+            border-color: #0B1B35;
+            box-shadow: 0 0 0 2px rgba(11, 27, 53, 0.1);
+        }
+
+        .chat-input button {
+            background: #E71F1F;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-input button:hover {
+            background: #c41818;
+            transform: translateY(-2px);
+        }
+
+        .chat-trigger {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #E71F1F;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(231, 31, 31, 0.3);
+            transition: all 0.3s ease;
+            z-index: 999;
+            font-size: 24px;
+        }
+
+        .chat-trigger:hover {
+            transform: scale(1.1) rotate(5deg);
+            background: #c41818;
+        }
+
+        .message {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 15px;
+            max-width: 85%;
+            word-wrap: break-word;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .bot-message {
+            background: white;
+            margin-right: 20%;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .user-message {
+            background: #0B1B35;
+            color: white;
+            margin-left: 15%;
+            border-bottom-right-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .close-chat {
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            padding: 5px;
+        }
+
+        .close-chat:hover {
+            color: #E71F1F;
+            transform: rotate(90deg);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            .chat-widget {
+                width: 90%;
+                right: 5%;
+                bottom: 20px;
+            }
+            
+            .chat-trigger {
+                width: 55px;
+                height: 55px;
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+
+        .address-infoo {
+            list-style: none;
+            padding: 0;
+        }
+
+        .address-infoo li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .address-infoo li i {
+            margin-right: 10px;
+            min-width: 16px;
+            color: #E71F1F;
+            font-size: 16px;
+        }
+
+        .address-infoo li a,
+        .address-infoo li span {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+            width: auto;
+        }
+
+        .address-infoo li a:hover {
+            color: #E71F1F;
+        }
+
+        @media (max-width: 768px) {
+            .address-infoo li {
+                font-size: 13px;
+            }
+            
+            .address-infoo li i {
+                font-size: 14px;
+            }
+        }
+
+        .company-description {
+            margin: 25px 0 15px;
+        }
+
+        .company-description .title {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .company-description .tagline {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .company-tagline {
+            color: #fff;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 20px 0;
+            max-width: 400px;
+        }
+
+        .company-tagline strong {
+            color: #fff;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -1145,87 +1374,103 @@
     END TESTIMONIALS SECTION -->
 
     <!-- footer area start -->
-    <footer class="footer-area" style="background: #0B1B35; padding: 40px 0;">
+    <footer class="footer-area footer-area-two">
         <div class="container">
-            <div class="footer-top">
-                <div class="row text-center">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="footer-top padding-top-85 padding-bottom-50">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6"> <!-- Increased column width to lg-4 -->
                         <div class="footer-widget widget">
-                            <a href="index.html" class="footer-logo"> 
-                                <img src="./assets/img/logo/safelitelogo1.png" alt="Safelite Guard Logo" style="max-height: 70px; width: auto; filter: brightness(0) invert(1);">
-                            </a>
-                            <h4 class="widget-headline" style="color: #fff; margin: 10px 0;">ABOUT US</h4>
-                            <p style="color: #fff; margin-bottom: 5px;">Safelite Guard Security - Your Trusted Security Partner</p>
-                            <p style="color: #E71F1F; font-weight: bold; margin-bottom: 15px; font-size: 16px;">PPO License #122394</p>
-                            <div class="social-icons" style="display: flex; justify-content: center; gap: 10px;">
-                                <a href="https://facebook.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://twitter.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-twitter"></i></a>
-                                <a href="https://linkedin.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://instagram.com" target="_blank" class="social-icon" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#E71F1F'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'"><i class="fab fa-instagram"></i></a>
-                        </div>
+                            <div class="about_me_widget style-01">
+                                <a href="index.html" class="footer-logo-two"> 
+                                    <img src="./assets/img/logo/safelitelogo1.png" alt="Safelite Guard Logo" style="height: 75px; width: auto;">
+                                </a>
+                                <p class="company-tagline">
+                                    <strong>Safelite Guard Security</strong> - Your Trusted Security Partner.<br>
+                                    We provide professional security solutions with a commitment to excellence.
+                                </p>
+                                <ul class="address-infoo mb-3">
+                                    <li>
+                                        <i class="icomoon-phone"></i>
+                                        <a href="tel:+17472174934">+1 (747)-217-4934</a>
+                                    </li>
+                                    <li>
+                                        <i class="icomoon-map-marker"></i>
+                                        <span>Los Angeles, CA</span>
+                                    </li>
+                                    <li>
+                                        <i class="icomoon-mail"></i>
+                                        <a href="mailto:info@safeliteguardsecurity.com">info@safeliteguardsecurity.com</a>
+                                    </li>
+                                </ul>
+                                <ul class="widget-list-items">
+                                    <li><div class="icon"><a href="#"><i class="fab fa-instagram"></i></a></div></li>
+                                    <li><div class="icon"><a href="#"><i class="fab fa-twitter"></i></a></div></li>
+                                    <li><div class="icon"><a href="#"><i class="fab fa-facebook-f"></i></a></div></li>
+                                    <li><div class="icon"><a href="#"><i class="fab fa-linkedin-in"></i></a></div></li>
+                                </ul>
                             </div>
                         </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline" style="color: #fff; margin-bottom: 10px;">QUICK LINKS</h4>
-                            <div style="margin: 0; padding: 0; list-style: none;">
-                                <a href="index.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Home</a>
-                                <a href="about.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">About Us</a>
-                                <a href="service.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Services</a>
-                                <a href="careers.html" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Careers</a>
-                                <a href="contact.html" style="color: #fff; display: block; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Contact Us</a>
                     </div>
-                </div>
-                                        </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline" style="color: #fff; margin-bottom: 10px;">OUR SERVICES</h4>
-                            <div style="margin: 0; padding: 0; list-style: none;">
-                                <a href="service.html#armed-security" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Armed Security</a>
-                                <a href="service.html#unarmed-security" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Unarmed Security</a>
-                                <a href="service.html#event-security" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Event Security</a>
-                                <a href="service.html#mobile-patrol" style="color: #fff; display: block; margin-bottom: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Mobile Patrol</a>
-                                <a href="service.html#executive-protection" style="color: #fff; display: block; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Executive Protection</a>
-                                        </div>
-                                        </div>
+                            <h4 class="widget-headline">QUICK LINKS</h4>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-headline">OUR SERVICES</h4>
+                            <ul>
+                                <li><a href="service.html#armed-security">Armed Security</a></li>
+                                <li><a href="service.html#unarmed-security">Unarmed Security</a></li>
+                                <li><a href="service.html#event-security">Event Security</a></li>
+                                <li><a href="service.html#mobile-patrol">Mobile Patrol</a></li>
+                                <li><a href="service.html#executive-protection">Executive Protection</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6"> <!-- Adjusted width to lg-3 -->
+                        <div class="widget footer-widget bg-panthar-widget">
+                            <div class="request-form-widget">
+                                <h4 class="widget-headline">Stay Connected</h4>
+                                <div class="request-form">
+                                    <div role="form">
+                                        <form action="#" method="post">
+                                            <div class="widget-footer-subscribe pt-1 pb-1">
+                                                <div class="single-input-inner mb-3">
+                                                    <input class="text-center" type="text" placeholder="Email">
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <button class="btn-panthar btn-border-base btn-style-white text-white w-100">
+                                                        <span class="top_left"></span>
+                                                        <span class="top_right"></span>
+                                                        <i class="fas fa-paper-plane"></i> SUBSCRIBE NOW
+                                                        <span class="bottom_left"></span>
+                                                        <span class="bottom_right"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-headline" style="color: #fff; text-align: center; margin-bottom: 10px;">CONTACT INFO</h4>
-                            <div class="contact-info" style="margin-top: 20px; text-align: left;">
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-phone" style="color: #E71F1F;"></i>
-                                    <a href="tel:+17472174934" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">+1 (747)-217-4934</a>
                         </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-envelope" style="color: #E71F1F;"></i>
-                                    <a href="mailto:info@safeliteguardsecurity.com" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">info@safeliteguardsecurity.com</a>
                     </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-globe" style="color: #E71F1F;"></i>
-                                    <a href="https://safeliteguardsecurity.com" target="_blank" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">www.safeliteguardsecurity.com</a>
-                        </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-clock" style="color: #E71F1F;"></i>
-                                    <span>Available 24/7</span>
-                    </div>
-                                <div class="contact-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                    <i class="fas fa-map-marker-alt" style="color: #E71F1F;"></i>
-                                    <a href="https://maps.google.com/?q=Los+Angeles,+CA" target="_blank" style="color: #fff; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#E71F1F'" onmouseout="this.style.color='#fff'">Los Angeles, CA</a>
                 </div>
             </div>
         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-area" style="border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0;">
+        <div class="copyright-area">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="copyright-area-inner" style="text-align: center;">
-                            <p style="color: rgba(255,255,255,0.7); margin: 0;">Copyright © 2025 Safelite Guard Services, Inc. All Rights Reserved</p>
-                            <p style="color: #E71F1F; font-weight: bold; margin-top: 5px; font-size: 16px;">PPO License #122394</p>
+                        <div class="copyright-area-inner copyright-border-two">
+                            <p>Copyright © 2025 Safelite Guard Security Service, Inc. All Rights Reserved | PPO #122394</p>
                         </div>
                     </div>
                 </div>
@@ -1263,6 +1508,94 @@
     <script src="assets/js/jquery.countdown.min.js"></script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
+
+    <div class="chat-trigger">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div class="chat-widget">
+        <div class="chat-header">
+            <span>Safelite Guard Chat</span>
+            <span class="close-chat">&times;</span>
+        </div>
+        <div class="chat-body">
+            <div class="message bot-message">
+                Hello! Welcome to Safelite Guard Security. How can we help you today?
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message...">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            document.querySelector('.chat-trigger').style.display = 'flex';
+        }, 2000);
+
+        const chatTrigger = document.querySelector('.chat-trigger');
+        const chatWidget = document.querySelector('.chat-widget');
+        const closeChat = document.querySelector('.close-chat');
+        const chatInput = document.querySelector('.chat-input input');
+        const chatButton = document.querySelector('.chat-input button');
+        const chatBody = document.querySelector('.chat-body');
+
+        const responses = {
+            'hello': 'Hello! How can I assist you with our security services?',
+            'services': 'We offer Armed Security, Unarmed Security, Event Security, Mobile Patrol, and Executive Protection. Which service interests you?',
+            'contact': 'You can reach us at +1 (747)-217-4934 or email us at info@safeliteguardsecurity.com',
+            'quote': 'I\'ll be happy to help you get a quote. Could you please provide your name and the type of security service you\'re interested in?',
+            'default': 'Thank you for your message. One of our security experts will contact you shortly. Would you like to know more about our services?'
+        };
+
+        chatTrigger.addEventListener('click', function() {
+            chatWidget.style.display = 'block';
+            chatTrigger.style.display = 'none';
+        });
+
+        closeChat.addEventListener('click', function() {
+            chatWidget.style.display = 'none';
+            chatTrigger.style.display = 'flex';
+        });
+
+        function addMessage(message, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+            messageDiv.textContent = message;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function handleUserInput() {
+            const message = chatInput.value.trim().toLowerCase();
+            if (message) {
+                addMessage(chatInput.value, true);
+                chatInput.value = '';
+
+                // Simple response logic
+                setTimeout(() => {
+                    let response = responses.default;
+                    for (let key in responses) {
+                        if (message.includes(key)) {
+                            response = responses[key];
+                            break;
+                        }
+                    }
+                    addMessage(response);
+                }, 500);
+            }
+        }
+
+        chatButton.addEventListener('click', handleUserInput);
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleUserInput();
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>
