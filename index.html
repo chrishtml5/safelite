@@ -364,6 +364,138 @@
             color: #fff;
             font-weight: 600;
         }
+
+        /* Chatbot Mobile Adjustments */
+        @media (max-width: 768px) {
+            .chat-widget {
+                width: 85%;
+                bottom: 80px;
+                right: 20px;
+                max-height: 400px;
+            }
+
+            .chat-trigger {
+                width: 50px;
+                height: 50px;
+                bottom: 85px;
+                right: 20px;
+                font-size: 20px;
+            }
+
+            .chat-header {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            .chat-body {
+                height: 280px;
+            }
+
+            .chat-input input {
+                font-size: 13px;
+            }
+
+            /* Ensure no overlap with back-to-top button */
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                z-index: 98;
+            }
+
+            /* Adjust message bubbles for mobile */
+            .message {
+                font-size: 13px;
+                padding: 10px;
+                margin: 8px 0;
+            }
+        }
+
+        /* Fix z-index stacking */
+        .chat-widget {
+            z-index: 99;
+        }
+
+        .chat-trigger {
+            z-index: 99;
+        }
+
+        .back-to-top {
+            z-index: 98;
+        }
+
+        /* Improve touch targets for mobile */
+        .chat-input button,
+        .close-chat,
+        .back-to-top {
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Ensure text is readable on mobile */
+        .chat-body {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Add smooth transitions */
+        .chat-widget,
+        .chat-trigger,
+        .back-to-top {
+            transition: all 0.3s ease;
+        }
+
+        /* Prevent scrolling when chat is open on mobile */
+        body.chat-open {
+            overflow: hidden;
+        }
+
+        /* Adjust positioning to prevent overlap */
+        .chat-widget {
+            bottom: 100px !important; /* Move chat widget up to avoid overlap */
+            z-index: 999 !important; /* Ensure chatbot stays on top */
+        }
+
+        .chat-trigger {
+            bottom: 100px !important; /* Move trigger up to match widget */
+            z-index: 999 !important;
+        }
+
+        /* Adjust scroll-to-top button */
+        .back-to-top,
+        .scroll-top,
+        #scroll {  /* Common class names for scroll buttons */
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 99 !important;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            .chat-widget {
+                bottom: 120px !important;
+                right: 15px !important;
+                width: 300px !important;
+            }
+
+            .chat-trigger {
+                bottom: 120px !important;
+                right: 15px !important;
+            }
+
+            .back-to-top,
+            .scroll-top,
+            #scroll {
+                bottom: 30px !important;
+                right: 15px !important;
+                width: 40px !important;
+                height: 40px !important;
+            }
+        }
     </style>
 </head>
 
@@ -1531,69 +1663,151 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            document.querySelector('.chat-trigger').style.display = 'flex';
-        }, 2000);
-
         const chatTrigger = document.querySelector('.chat-trigger');
         const chatWidget = document.querySelector('.chat-widget');
         const closeChat = document.querySelector('.close-chat');
         const chatInput = document.querySelector('.chat-input input');
-        const chatButton = document.querySelector('.chat-input button');
         const chatBody = document.querySelector('.chat-body');
+        const sendButton = document.querySelector('.chat-input button');
 
-        const responses = {
-            'hello': 'Hello! How can I assist you with our security services?',
-            'services': 'We offer Armed Security, Unarmed Security, Event Security, Mobile Patrol, and Executive Protection. Which service interests you?',
-            'contact': 'You can reach us at +1 (747)-217-4934 or email us at info@safeliteguardsecurity.com',
-            'quote': 'I\'ll be happy to help you get a quote. Could you please provide your name and the type of security service you\'re interested in?',
-            'default': 'Thank you for your message. One of our security experts will contact you shortly. Would you like to know more about our services?'
+        let leadInfo = {
+            name: '',
+            email: '',
+            phone: '',
+            interest: '',
+            contacted: false
         };
 
-        chatTrigger.addEventListener('click', function() {
-            chatWidget.style.display = 'block';
-            chatTrigger.style.display = 'none';
-        });
+        let currentQuestion = 'initial';
+        let welcomeMessageShown = false;
+        let invalidAttempts = 0;
 
-        closeChat.addEventListener('click', function() {
-            chatWidget.style.display = 'none';
-            chatTrigger.style.display = 'flex';
-        });
+        // Show chat trigger after 3 seconds
+        setTimeout(() => {
+            if (chatTrigger) chatTrigger.style.display = 'flex';
+        }, 3000);
 
-        function addMessage(message, isUser = false) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
-            messageDiv.textContent = message;
-            chatBody.appendChild(messageDiv);
-            chatBody.scrollTop = chatBody.scrollHeight;
+        // Open chat function
+        if (chatTrigger) {
+            chatTrigger.addEventListener('click', function() {
+                chatWidget.style.display = 'block';
+                chatTrigger.style.display = 'none';
+                if (!welcomeMessageShown) {
+                    startLeadCapture();
+                    welcomeMessageShown = true;
+                }
+            });
         }
 
-        function handleUserInput() {
-            const message = chatInput.value.trim().toLowerCase();
-            if (message) {
-                addMessage(chatInput.value, true);
-                chatInput.value = '';
+        function startLeadCapture() {
+            addMessage("Hello! I'm here to help you with your security needs. Could you please tell me your name?", 'bot');
+            currentQuestion = 'name';
+        }
 
-                // Simple response logic
-                setTimeout(() => {
-                    let response = responses.default;
-                    for (let key in responses) {
-                        if (message.includes(key)) {
-                            response = responses[key];
-                            break;
+        function processLeadCapture(message) {
+            switch(currentQuestion) {
+                case 'name':
+                    leadInfo.name = message;
+                    addMessage(`Thank you, ${message}! To better assist you, could you share your email address?`, 'bot');
+                    currentQuestion = 'email';
+                    invalidAttempts = 0;
+                    break;
+
+                case 'email':
+                    if (isValidEmail(message)) {
+                        leadInfo.email = message;
+                        addMessage("Perfect! What's the best phone number to reach you?", 'bot');
+                        currentQuestion = 'phone';
+                        invalidAttempts = 0;
+                    } else {
+                        invalidAttempts++;
+                        if (invalidAttempts >= 2) {
+                            addMessage("Let's try something else. Would you prefer to call us directly at (747)-217-4934?", 'bot');
+                            currentQuestion = 'alternate_contact';
+                        } else {
+                            addMessage("I need a valid email address to send you information. Example: name@email.com", 'bot');
                         }
                     }
-                    addMessage(response);
-                }, 500);
+                    break;
+
+                case 'alternate_contact':
+                    addMessage("Which security service interests you the most?\n• Armed Security\n• Unarmed Security\n• Event Security\n• Mobile Patrol\n• Executive Protection", 'bot');
+                    currentQuestion = 'interest';
+                    break;
+
+                case 'phone':
+                    if (isValidPhone(message)) {
+                        leadInfo.phone = message;
+                        addMessage("Which security service interests you the most?\n• Armed Security\n• Unarmed Security\n• Event Security\n• Mobile Patrol\n• Executive Protection", 'bot');
+                        currentQuestion = 'interest';
+                    } else {
+                        invalidAttempts++;
+                        if (invalidAttempts >= 2) {
+                            addMessage("No problem! Let's focus on your security needs instead.", 'bot');
+                            currentQuestion = 'interest';
+                        } else {
+                            addMessage("Please provide a valid phone number (e.g., 123-456-7890)", 'bot');
+                        }
+                    }
+                    break;
+
+                case 'interest':
+                    leadInfo.interest = message;
+                    saveLead(leadInfo);
+                    addMessage("Thank you! A security specialist will contact you shortly to discuss our services. In the meantime, do you have any specific questions?", 'bot');
+                    currentQuestion = 'questions';
+                    break;
+
+                case 'questions':
+                    handleGeneralQuestions(message);
+                    break;
             }
         }
 
-        chatButton.addEventListener('click', handleUserInput);
-        chatInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                handleUserInput();
+        function handleGeneralQuestions(message) {
+            const msg = message.toLowerCase();
+            if (msg.includes('price') || msg.includes('cost')) {
+                addMessage("Pricing varies based on your specific needs. Our specialist will provide a detailed quote during your consultation.", 'bot');
+            } else if (msg.includes('time') || msg.includes('when')) {
+                addMessage("We offer 24/7 security services and can start as soon as needed.", 'bot');
+            } else {
+                addMessage("Is there anything specific about our security services you'd like to know?", 'bot');
             }
-        });
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function isValidPhone(phone) {
+            return /^[\d\s()-+]{10,}$/.test(phone);
+        }
+
+        function saveLead(leadInfo) {
+            console.log('Lead captured:', leadInfo);
+            // Implement your lead saving logic here
+        }
+
+        // Rest of your existing functions (addMessage, sendMessage, etc.)
+        // [Previous message handling code]
+
+        if (closeChat) {
+            closeChat.addEventListener('click', function() {
+                chatWidget.style.display = 'none';
+                chatTrigger.style.display = 'flex';
+                chatBody.innerHTML = '';
+                welcomeMessageShown = false;
+                currentQuestion = 'initial';
+                invalidAttempts = 0;
+                leadInfo = {
+                    name: '',
+                    email: '',
+                    phone: '',
+                    interest: '',
+                    contacted: false
+                };
+            });
+        }
     });
     </script>
 </body>
